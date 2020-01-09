@@ -1,3 +1,48 @@
+# Secure Person API
+
+Secure Person API which has two users:
+1. user
+2. admin
+
+Following roles are available:
+1. USER
+2. ADMIN
+
+The user and roles are setup in PersonSecurityConfigurer as shown below:
+
+```java
+ auth.inMemoryAuthentication()
+     .withUser("user").password("{noop}password").roles("USER")
+     .and()
+     .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
+```
+Follow API/REST roles based access has been setup:
+
+
+```java
+  http
+     //HTTP Basic authentication
+     .httpBasic()
+     .and()
+     .authorizeRequests()
+     .antMatchers(HttpMethod.GET, "/persons/**").hasRole("USER")
+     .antMatchers(HttpMethod.POST, "/persons").hasRole("ADMIN")
+     .antMatchers(HttpMethod.PUT, "/persons/**").hasRole("ADMIN")
+     .antMatchers(HttpMethod.PATCH, "/persons/**").hasRole("ADMIN")
+     .antMatchers(HttpMethod.DELETE, "/persons/**").hasRole("ADMIN")
+     .and()
+     .csrf().disable()
+     .formLogin().disable();
+```
+
+## Run application
+
+```bash
+mvn spring-boot:run
+
+```
+
+## Demo
 
 
 ### GET person vanila with NO credentials
