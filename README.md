@@ -62,7 +62,7 @@ _**Output**_
  }
 ```
 
-### POST a new person with NO credential
+### POST a new person with NO credential - create a new Person
 
 _**Request**_
 ```bash
