@@ -1,4 +1,4 @@
-# Secure Person API
+# Secure Person API - Authentication & Authorisation
 
 Secure Person API which has two users:
 1. user
