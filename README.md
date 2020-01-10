@@ -16,7 +16,7 @@ The user and roles are setup in PersonSecurityConfigurer as shown below:
      .and()
      .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
 ```
-Follow API/REST roles based access has been setup:
+API/REST roles based access has been setup as shown below:
 
 
 ```java
