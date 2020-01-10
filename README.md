@@ -10,7 +10,7 @@ Following roles are available:
 
 The user and roles are setup in PersonSecurityConfigurer as shown below:
 
-**_NOTE_** User & Roles can be setup by gettting the information from DB
+**_NOTE:_** User & Roles can be setup by gettting the information from DB
 
 ```java
  auth.inMemoryAuthentication()
