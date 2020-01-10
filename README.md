@@ -29,14 +29,16 @@ API/REST roles based access has been setup as shown below:
      .httpBasic()
      .and()
      .authorizeRequests()
-     .antMatchers(HttpMethod.GET, "/persons/**").hasRole("USER")
-     .antMatchers(HttpMethod.POST, "/persons").hasRole("ADMIN")
-     .antMatchers(HttpMethod.PUT, "/persons/**").hasRole("ADMIN")
-     .antMatchers(HttpMethod.PATCH, "/persons/**").hasRole("ADMIN")
-     .antMatchers(HttpMethod.DELETE, "/persons/**").hasRole("ADMIN")
+         .antMatchers(HttpMethod.GET, "/persons/**").hasRole("USER")
+         .antMatchers(HttpMethod.POST, "/persons").hasRole("ADMIN")
+         .antMatchers(HttpMethod.PUT, "/persons/**").hasRole("ADMIN")
+         .antMatchers(HttpMethod.PATCH, "/persons/**").hasRole("ADMIN")
+         .antMatchers(HttpMethod.DELETE, "/persons/**").hasRole("ADMIN")
      .and()
-     .csrf().disable()
-     .formLogin().disable();
+        .csrf()
+        .disable()
+        .formLogin()
+        .disable();
 ```
 
 ## Run application
