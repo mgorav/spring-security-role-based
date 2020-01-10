@@ -1,4 +1,4 @@
-# Securing REST API (Authentication & Authorization - Role Based)
+# Securing REST APIs (Authentication & Authorization - Role Based)
 
 Secure Person API which has two users:
 1. user
