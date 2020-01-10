@@ -47,10 +47,12 @@ mvn spring-boot:run
 
 ### GET persons with NO credentials
 
+_**Request**_
 ```bash
 curl localhost:8080/persons
 
 ```
+_**Output**_
 ```json
 {
   "timestamp":"2020-01-09T20:31:03.100+0000",
@@ -62,12 +64,13 @@ curl localhost:8080/persons
 
 ### POST a new person with NO credential
 
+_**Request**_
 ```bash
 curl -X POST localhost:8080/persons -H "Content-type:application/json" 
 -d {\"firstName\":\"ABC\",\"lastName\":\"DEF\",\"phoneNumber\":\"123\"}
 
 ```
-
+_**Output**_
 ```json
 { 
   "timestamp":"2020-01-09T20:38:03.492+0000",
@@ -80,10 +83,12 @@ curl -X POST localhost:8080/persons -H "Content-type:application/json"
 
 ### GET persons with credentials
 
+_**Request**_
 ```bash
 curl localhost:8080/persons -u user:password
 
 ```
+_**Outputt**_
 ```json
     [
       {
