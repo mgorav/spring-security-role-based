@@ -56,7 +56,8 @@ _**Output**_
 ```json
 {
   "timestamp":"2020-01-09T20:31:03.100+0000",
-  "status":401,"error":"Unauthorized",
+  "status":401,
+  "error":"Unauthorized",
   "message":"Unauthorized",
   "path":"/persons",
  }
