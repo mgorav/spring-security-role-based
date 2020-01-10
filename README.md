@@ -12,9 +12,13 @@ The user and roles are setup in PersonSecurityConfigurer as shown below:
 
 ```java
  auth.inMemoryAuthentication()
-     .withUser("user").password("{noop}password").roles("USER")
+     .withUser("user")
+        .password("{noop}password")
+        .roles("USER")
      .and()
-     .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
+        .withUser("admin")
+            .password("{noop}password")
+            .roles("USER", "ADMIN");
 ```
 API/REST roles based access has been setup as shown below:
 
