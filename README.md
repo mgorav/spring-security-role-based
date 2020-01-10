@@ -52,7 +52,12 @@ curl localhost:8080/persons
 
 ```
 ```json
-{"timestamp":"2020-01-09T20:31:03.100+0000","status":401,"error":"Unauthorized","message":"Unauthorized","path":"/persons"}
+{
+  "timestamp":"2020-01-09T20:31:03.100+0000",
+  "status":401,"error":"Unauthorized",
+  "message":"Unauthorized",
+  "path":"/persons",
+ }
 ```
 
 ### POST a new person with NO credential
@@ -64,7 +69,13 @@ curl -X POST localhost:8080/persons -H "Content-type:application/json"
 ```
 
 ```json
-"timestamp":"2020-01-09T20:38:03.492+0000","status":401,"error":"Unauthorized","message":"Unauthorized","path":"/persons"}
+{ 
+  "timestamp":"2020-01-09T20:38:03.492+0000",
+  "status":401,
+  "error":"Unauthorized",
+  "message":"Unauthorized",
+  "path":"/persons",
+ }
 ```
 
 ### GET person vanila with  credentials
