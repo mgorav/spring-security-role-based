@@ -45,7 +45,7 @@ mvn spring-boot:run
 ## Demo
 
 
-### GET person vanila with NO credentials
+### GET persons with NO credentials
 
 ```bash
 curl localhost:8080/persons
@@ -78,7 +78,7 @@ curl -X POST localhost:8080/persons -H "Content-type:application/json"
  }
 ```
 
-### GET person vanila with  credentials
+### GET persons with credentials
 
 ```bash
 curl localhost:8080/persons -u user:password
